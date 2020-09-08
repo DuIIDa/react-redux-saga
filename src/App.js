@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PostForm from './components/PostForm'
+import Posts from './components/Posts'
+import FeatchedPost from './components/FeatchedPosts'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="container pt-3">
+            <div className="row">
+                <div className="col-12">
+                    <PostForm></PostForm>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-6">
+                    <h2>Синхронные посты</h2>
+                    <Posts></Posts>
+                </div>
+                <div className="col-6">
+                    <h2>Асинхронные посты</h2>
+                    <FeatchedPost></FeatchedPost>
+                </div>
+            </div>
+      </div>
   );
 }
 
